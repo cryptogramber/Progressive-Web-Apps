@@ -1,0 +1,133 @@
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes correctAFlip { from { background-color:#89AE13; } to { background-color:#FFF; } }
+@-moz-keyframes correctAFlip { from { background-color:#89AE13; } to { background-color:#FFF; } }
+@keyframes correctAFlip { from { background-color:#89AE13; } to { background-color:#FFF; } }
+@-webkit-keyframes correctA { from { background-color:#89AE13; } to { background-color:#FFF; } }
+@-moz-keyframes correctA { from { background-color:#89AE13; } to { background-color:#FFF; } }
+@keyframes correctA { from { background-color:#89AE13; } to { background-color:#FFF; } }
+
+@-webkit-keyframes incorrectAFlip { from { background-color:#d92425; } to { background-color:#FFF; } }
+@-moz-keyframes incorrectAFlip { from { background-color:#d92425; } to { background-color:#FFF; } }
+@keyframes incorrectAFlip { from { background-color:#d92425; } to { background-color:#FFF; } }
+@-webkit-keyframes incorrectA { from { background-color:#d92425; } to { background-color:#FFF; } }
+@-moz-keyframes incorrectA { from { background-color:#d92425; } to { background-color:#FFF; } }
+@keyframes incorrectA { from { background-color:#d92425; } to { background-color:#FFF; } }
+
+.kbox1_g_flip {
+	-webkit-animation:correctAFlip;				/* call keyframe correctA, ease-in and repeat it only 1 time */
+	-moz-animation:correctAFlip;
+	animation:correctAFlip; }
+.kbox1_g {
+	-webkit-animation:correctA;				/* call keyframe correctA, ease-in and repeat it only 1 time */
+	-moz-animation:correctA;
+	animation:correctA; }
+.kbox1_r_flip {
+	-webkit-animation:incorrectAFlip;  			/* call keyframe correctA, ease-in and repeat it only 1 time */
+	-moz-animation:incorrectAFlip;
+	animation:incorrectAFlip; }
+.kbox1_r {
+	-webkit-animation:incorrectAFlip;  			/* call keyframe correctA, ease-in and repeat it only 1 time */
+	-moz-animation:incorrectAFlip;
+    animation:incorrectAFlip; }
+.kbox1_g, .kbox1_r, .kbox1_g_flip, .kbox1_r_flip {
+	-webkit-animation-fill-mode:forwards;	/* makes sure that after animation is done we remain @ last keyframe value (white bg) */
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	-webkit-animation-duration:0.3s;
+	-moz-animation-duration:0.3s;
+    animation-duration:0.3s; }
+    
+.counterIcon { 
+    display: inline-block; 
+    margin: 0 5px; }
+.counterIcon img {
+    width: 40px;
+}
+h2 { 
+    margin-block-start: 1.1em;
+    color: #17242c; }
+.spacerClear {
+    width: 100%;
+    height: 0px;
+    display: block;
+    clear: both;
+}
+ul {
+    padding-inline-start: 20px;
+}
+mat-card { margin: 20px auto; }
+input {
+    float: left;
+    width: 100%;
+    -webkit-appearance: none;
+    border: 1px solid #c3ccce;
+    border-radius: 2px;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    outline: none;
+    vertical-align: middle;
+    -ms-box-sizing: border-box; /* ie8 */
+    -khtml-box-sizing: border-box; /* konqueror */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    box-sizing: border-box; /* css3 rec */
+}
+.inputWrapper { margin-right: 104px; }
+
+.mat-raised-button { color: #17242c; }
+.scoreBox {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 2px;
+    background: #c3ccce;
+    color: #17242c;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    min-width: 94px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 2px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+#headerContent { float: right; }
+#inputType, #helpPopup {
+    margin-top: 10px;
+    margin-left: 10px;
+    min-width: 94px;
+}
+#submitButton {
+    margin-left: 10px;
+    min-width: 94px;
+}
+.infoCounters { display: inline-block; }
+.centerContent {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.centerContentTop {
+    width: 100%;
+    min-height: 70px;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+#hintsTips { 
+    font-size: x-small; 
+    line-height: 1.7em; }
+
+@media all and (max-width: 456px) {
+    .scoreBox, #helpPopup, #inputType {
+        display: block;
+    }
+}

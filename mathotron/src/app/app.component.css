@@ -1,0 +1,65 @@
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card {
+    width: 100%;
+    max-width: 264px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+#top {
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+}
+
+#history {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    color: #0D47A1;
+    overflow-y: scroll;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#bottom {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#calcInput {
+    width: 240px;
+    font-family: 'Roboto Mono', monospace;
+    height: 50px;
+    line-height: 52px;
+    font-size: 30px;
+    color: #0D47A1;
+    background: #ECEFF1;
+    border-radius: 2px;
+    padding: 5px 10px;
+    margin: 2px auto;
+    overflow-x: scroll;
+}
+
+button {
+    margin: 2px;
+    min-width: 62px;
+}
+
+.mat-raised-button {
+    font-family: 'Roboto Mono', monospace;
+    font-size: inherit;
+}
+
+#zerobutton {
+    min-width: 128px;
+}

@@ -1,0 +1,74 @@
+<div class="infoCounters">
+  <div class="scoreBox">
+    Score:&nbsp;
+    <span id="counterScore">0</span>
+  </div>
+  <div class="scoreBox">
+    Streak:&nbsp;
+    <span id="counterStreak">0</span>
+  </div>
+</div>
+<div id="headerContent">
+  <button id="inputType" mat-raised-button (click)="toggleInput()">Use Kanji</button>
+  <button id="helpPopup" mat-raised-button (click)="toggleHelp()">Help</button>
+</div>
+
+<mat-card>
+  <div class="centerContentTop">
+    <br />
+    <div class="counterIcon" *ngFor="let icon of iconList">
+      <img src="/assets/graphics/{{ icon }}.png" />
+    </div>
+  </div>
+  <div class="spacerClear"></div>
+  <div class="centerContent">
+    <h2>{{ numObjects }} {{ objectName }}</h2>
+  </div>
+</mat-card>
+
+<mat-card>
+  <form (ngSubmit)="checkEntry()">
+    <div class="inputWrapper">
+      <input type="text" id="counterEntry" name="counterEntry" [className]="inputClass" [(ngModel)]="counterEntry" autofocus />
+    </div>
+    <button id="submitButton" mat-raised-button type="submit">Submit</button>
+  </form>
+</mat-card>
+
+<div id="hintsTips" style="display: none;">
+<ul>
+  <li>
+    Enter the number and the counter, but not the name of the object itself. E.g. for five sheets of paper you would enter ごまい for kana or 五枚 for kanji. Use the button above to switch between kana/kanji modes.
+  </li>
+  <li>
+    Some counters have multiple correct pronunciations; the most common variants will be accepted as correct. See <a href="https://www.tofugu.com/japanese/japanese-counters-list/">Tofugu's excellent article on Japanese counters</a> for more detailed information.
+  </li>
+  <li>
+    Current counters:
+  </li>
+    <ul>
+      <li>ど／度 degrees of temperature or angle</li>
+      <li>はい／杯 liquids in cups or bowls</li>
+      <li>つ generic or abstract things</li>
+      <li>にん／人 people</li>
+      <li>こ／個 generic things, often small and round</li>
+      <li>ほん／本 long, cylindrical objects</li>
+      <li>まい／枚 flat or thin objects</li>
+      <li>さつ／冊 bound volumes (books, magazines)</li>
+      <li>だい／台 machines and surfaces</li>
+      <li>ひき／匹 small animals, insects</li>
+      <li>わ／羽 birds, rabbits</li>
+      <li>はこ／箱 boxes</li>
+      <li>かい／階 floors (of a building)</li>
+      <li>めい／名 people (honorific, e.g. customers)</li>
+      <li>じかん／時間 hours as a period of time</li>
+      <li>じょう／錠 pills</li>
+      <li>とう／頭 large animals, livestock</li>
+      <li>きれ／切れ slices (of pizza, bread, etc)</li>
+    </ul>
+  <li>
+    Errors? Please let amber@kairozu.com know, thanks!
+  </li>
+</ul>
+</div>
+<br /><br />

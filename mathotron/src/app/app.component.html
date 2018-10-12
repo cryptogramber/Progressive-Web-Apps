@@ -1,0 +1,47 @@
+<div id="container">
+  <div id="top">
+    <mat-card>
+    <div id="history">
+      Hi.<br />
+      I am Mathotron.<br />
+      Feed me your numbers.<br />
+    </div>
+    </mat-card>
+  </div>
+  <div id="bottom">
+    <mat-card class="margin-bottom-10">
+      <div id="calcInput" name="inputDigits">
+        {{ inputDigits }}
+      </div>
+      <div class="operators">
+        <button mat-raised-button color="accent" (click)="clear()">C</button>
+        <button mat-raised-button color="accent" (click)="togglepos()">&#177;</button>
+        <button mat-raised-button color="accent" (click)="operation('o')">%</button>
+        <button mat-raised-button color="accent" (click)="operation('d')">/</button>
+      </div>
+      <div class="operators">
+        <button mat-raised-button color="accent" (click)="number(7)">7</button>
+        <button mat-raised-button color="accent" (click)="number(8)">8</button>
+        <button mat-raised-button color="accent" (click)="number(9)">9</button>
+        <button mat-raised-button color="accent" (click)="operation('m')">*</button>
+      </div>
+      <div class="operators">
+        <button mat-raised-button color="accent" (click)="number(4)">4</button>
+        <button mat-raised-button color="accent" (click)="number(5)">5</button>
+        <button mat-raised-button color="accent" (click)="number(6)">6</button>
+        <button mat-raised-button color="accent" (click)="operation('s')">-</button>
+      </div>
+      <div class="operators">
+        <button mat-raised-button color="accent" (click)="number(1)">1</button>
+        <button mat-raised-button color="accent" (click)="number(2)">2</button>
+        <button mat-raised-button color="accent" (click)="number(3)">3</button>
+        <button mat-raised-button color="accent" (click)="operation('a')">+</button>
+      </div>
+      <div class="operators">
+          <button mat-raised-button color="accent" id="zerobutton" (click)="number(0)">0</button>
+          <button mat-raised-button color="accent" (click)="number('.')">.</button>
+          <button mat-raised-button color="accent" (click)="equals()">=</button>
+      </div>
+    </mat-card>
+  </div>
+</div>
