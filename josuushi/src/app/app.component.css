@@ -62,9 +62,11 @@ input {
     -webkit-appearance: none;
     border: 1px solid #c3ccce;
     border-radius: 2px;
-    font-size: 26px;
-    line-height: 36px;
-    outline: none;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    padding: 0 2px;
+    margin-top: 3px;
+    outline: 0;
     vertical-align: middle;
     -ms-box-sizing: border-box; /* ie8 */
     -khtml-box-sizing: border-box; /* konqueror */
